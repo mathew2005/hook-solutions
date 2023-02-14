@@ -1,0 +1,752 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+
+@font-face {
+    font-family: 'Graphik';
+    src: url(./assets/Graphik-Font-Family/GraphikRegular.otf);
+}
+
+:root{
+    --primary-color-900 : hsl(0,0%,0%);
+    --primary-color-100: hsl(240,5%,8%);
+    --primary-color-200: hsl(240,2%,10%);
+    --primary-color-300: hsl(240,1%,17%);
+    --primary-color-400: hsl(0, 0%, 5%);
+    --secondary-color-900: hsl(0,0%,100%);
+    --secondary-color-100: hsl(0, 0%, 68%);
+
+    --main-skin-color-900: hsl(245,57%,56%);
+    --main-skin-color-100: hsl(245,45%,17%);
+    
+}
+*{
+    box-sizing:border-box;
+    padding: 0;
+    margin: 0;
+    max-width: 100vw;
+    border: none;
+    scroll-behavior: smooth;
+    font-family: "Mulish", san-serif;
+    
+}
+
+.active{
+display: block !important;
+}
+
+svg{
+    width: 2rem;
+    fill: var(--main-skin-color-900) !important;
+    stroke: var(--main-skin-color-900);
+    stroke-width: 20;
+}
+.logo-container {
+    margin-bottom: 1rem;
+}
+.logo-container a{
+    display: flex;
+    align-items: center;
+    justify-content:left;
+}
+.logo-container span{
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--secondary-color-900);
+}
+body{
+    color: var(--secondary-color-900);
+    background: var(--primary-color-900);
+    
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: var(--main-skin-color-900);
+}
+.dimmed-text {
+    font-size: 1.125rem;
+    line-height: 1.5;
+    opacity: 0.9;
+}
+#logo{
+    max-height: 2rem;
+}
+.toggle-container{
+    width: 40px;
+    height: 20px;
+    border-radius: 12px;
+    background: #afafaf;
+    margin-right: 2rem;
+}
+.toggle-active{
+    background: var(--main-skin-color-900);
+    transition: all 1s;
+}
+.toggle-btn .btn-move{
+    transform: translateX(100%);
+    transition: all 1s;
+    
+}
+.toggle-btn{
+    background: var(--secondary-color-900);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+nav{
+    background: var(--primary-color-400);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 40px;
+    padding: 5.8vh 3vw;
+    flex-wrap: wrap;
+    height: 6rem;
+}
+.touch-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+nav .link-container{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+nav .link-container a {
+    margin-right: 2rem;
+}
+
+nav .link-container span a:hover{
+    text-decoration: underline;
+}
+.pickr-container{
+    background: var(--secondary-color-900);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2rem;
+}
+
+.pickr{
+    width: 100%;
+}
+.register{
+    background:var(--secondary-color-900);
+    padding: 10px 30px;
+    border-radius: 10px;
+    color: var(--primary-color-900);
+    width: 8rem;
+    text-align: center;
+    transition: background 0.4s;
+}
+.register:hover{
+    opacity: 0.8;
+    
+}
+#home{
+    min-height: 100vh;
+    padding-top: 3rem;
+
+}
+.meetup-container{
+    background: var(--main-skin-color-100);
+    color: white;
+    font-weight: 300;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    max-width: 370px;
+    border-radius: 9999rem;
+
+}
+.meetup-container .join{
+    background: var(--main-skin-color-900);
+    margin-right: 0.75rem;
+    border-radius: 9999rem;
+    padding: 4px 12px;
+}
+.meetup-container .meetup-text{
+    font-size: 0.8rem;
+}
+#home h1{
+    margin: 20px 0;
+    font-size: 5rem;
+    font-weight: 900;
+}
+#home h1::selection{
+background: var(--main-skin-color-900);
+color: var(--secondary-color-900);
+}
+.home-content{
+    /* margin-left: 50px; */
+    margin: 5vh 5vw;
+}
+.email-container{
+    display: flex;
+    height: 3.5 rem;
+}
+.email-container input{
+background: var(--primary-color-100);
+color: var(--secondary-color-900);
+width: 340px;
+height: 3.5rem;
+padding: 20px 2vw;
+border-radius: 4px 0 0 4px;
+font-size: 0.7rem;
+
+}
+.email-container ::placeholder{
+    color: var(--secondary-color-900);
+
+}
+.email-container input::selection{
+    background-color: var(--main-skin-color-900);
+}
+.email-container button{
+    background: var(--primary-color-300);
+    padding: 0px 44px;
+    color: var(--secondary-color-900);
+    border-radius: 0 4px 4px 0;
+    font-size: 0.7rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    height: 3.5rem;
+}
+.email-container button:hover{
+    opacity: 0.7;
+}
+.home-content p{
+    color: var(--primary-color-300);
+    margin-top: 20px;
+    font-size: 0.7rem;
+}
+
+.features-container{
+    display: flex;
+    padding: 1rem 5vw;
+    flex-wrap: wrap;
+    margin: auto;
+    max-width: 98%;
+
+}
+#features .inbox,.microchip, .database{
+    max-width : 20rem;
+    margin: 0rem 2rem 4rem 2rem;
+    
+   
+}
+#features div  div div i {
+    font-size: 32px;
+    
+}
+#features div div div{
+    
+    background: var(--main-skin-color-900);
+
+    width: 80px; 
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+#features div h2{
+    margin: 16px  0 24px 0;
+}
+
+#features p {
+    margin-bottom: 2rem;
+    min-width: 15rem;
+    
+}
+#features  a {
+    color: var(--secondary-color-900);
+    font-size: 0.8rem;
+    background: var(--main-skin-color-900);
+    color: var(--secondary-color-900);
+    padding: 0.7rem 1.7rem;
+    border-radius: 4px;
+    transition: all 0.1s;
+    margin-bottom: 10rem;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+#features a:hover{
+    padding: 0.8rem 1.9rem;
+}
+
+#banner-section{
+    font-size: 5em;
+    font-weight: 900;
+    line-height: 1.25;
+    padding: 8rem 0;
+    
+}
+#banner-section .banner-content{
+    text-align: center;
+    max-width: 100vw;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+}
+#banner-section span{
+text-decoration: underline;
+text-decoration-color: var(--main-skin-color-900);
+}
+
+#pricing{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    line-height: 2;
+    font-weight:300;
+
+}
+
+#pricing .pricing-text h2{
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    /* min-width: 28rem; */
+}
+#pricing .pricing-text p{
+    margin-bottom: 2rem;
+    max-width: 20.9rem;
+}
+
+#pricing .pricing-text i{
+    margin-right: 2rem;
+    margin-top: 0.2rem;
+    color: var(--main-skin-color-900);
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+#pricing .pricing-text h4{
+    font-size: 1.2rem;
+}
+#pricing .pricing-offers{
+    display: flex;
+    flex-wrap: wrap;
+    color: #fff;
+
+}
+.small-price, .large-price{
+    width: 300px;
+    padding: 20px 28px ;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+.small-price{
+    background: var(--primary-color-200);
+    background: #19191A;
+    margin-right: 1.5rem;
+    
+}
+.large-price{
+    background: var(--secondary-color-900);
+    color: var(--primary-color-900);
+    width: 300px;
+}
+.pricing-offers .normal{
+    color: var(--main-skin-color-900);
+    font-size: 1rem;
+    font-weight: 700;
+}
+.pricing-offers div span{
+font-size: 4rem;
+}
+.small-price div, .large-price div{
+display : flex;
+align-items: center;
+}
+.small-price i, .large-price i{
+    font-size: 0.9rem;
+    color: var(--main-skin-color-900);
+}
+
+
+.small-price a button ,.large-price a button {
+    background: var(--primary-color-900);
+    color: var(--secondary-color-900);
+    text-align: center;
+    width: 90%;
+    height: 36px;
+    border-radius: 4px;
+    margin-top: 1.5rem;
+    transition: all 0.2s;
+    cursor: pointer;
+    
+}
+.small-price a button:hover, .large-price a button:hover {
+    transform: scale(1.1);
+}
+.large-price a button{
+    
+    background: var(--main-skin-color-900);
+    color: var(--secondary-color-900);
+}
+.small-price p{
+    color: var(--secondary-color-100);
+}
+.x{
+    font-weight: 900;
+    font-size: 0.8rem !important;
+    margin-right: 0.2rem;
+}
+.pricing-offers h6{
+    opacity: 0.5; 
+}
+
+section{
+    /* scroll appear animation */
+    width: 100vw;
+    transition: transform 1s, opacity 1s;
+  
+  }
+.section--hidden{
+    opacity: 0;
+    transform: translateY(8rem);
+  }
+  
+
+
+.section__title{
+    padding-left: 5vw;
+}
+
+.section__title h2{
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+.section__title h3{
+    font-size: 1.125rem;
+    line-height: 1.5;
+    opacity: 0.5;
+    font-weight:400;
+}
+
+.slider {
+    max-width: 100vw;
+    height: 35rem;
+    margin: 0 auto;
+    position: relative;
+    background: var(--primary-color-200);
+    /* IN THE END */
+    overflow: hidden;
+  }
+  
+  .slide {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 35rem;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    /* THIS creates the animation! */
+    transition: transform 1s;
+  }
+  
+  .slide > img {
+    /* Only for images that have different size than slide */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .slider__btn {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    
+    border: none;
+    background: rgba(255, 255, 255, 0.7);
+    color: #333;
+    border-radius: 50%;
+    height: 2.5rem;
+    width: 2.5rem;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: 2px solid white;
+
+  }
+  .slider__btn:hover{
+    border-color: var(--main-skin-color-900);
+  }
+  .slider__btn--left {
+    left: 10%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .slider__btn--right {
+    right: 10%;
+    transform: translate(50%, -50%);
+  }
+  .icon-left:hover{
+fill : var(--main-skin-color-900) !important;
+
+  }
+  
+  
+  
+  /* TESTIMONIALS */
+  .testimonial {
+    width: 65%;
+    max-width: 50rem;
+    position: relative;
+    /* background: red; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .testimonial h5{
+    font-weight: 900;
+    font-size: 2.5rem;
+    font-family: 'Mulish';
+    text-decoration: underline;
+    text-decoration-color: var(--main-skin-color-900);
+    text-align: center;
+  }
+  
+
+  
+  .testimonial__header {
+    font-size: 2.25rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    
+  }
+  
+  .testimonial__text {
+    font-size: 1.125rem;
+    line-height: 1.5;
+    /* margin-bottom: 3.5rem; */
+    color: var(--secondary-color-900);
+    opacity: 0.5;
+    text-align: center;
+  }
+  
+  .testimonial__author {
+    font-style: normal;
+    display: grid;
+    grid-template-columns: 4rem 1fr;
+    column-gap: 1rem;
+    margin-top: 4rem;
+   
+
+  }
+  
+  .testimonial__photo {
+    grid-row: 1 / span 2;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: 4px solid var(--main-skin-color-900);
+
+  }
+  
+  .testimonial__name {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 900;
+  }
+  
+  .testimonial__location {
+    font-size: .7rem;    
+  }
+  
+  .section__title--testimonials {
+    margin-bottom: 4rem;
+  }
+  
+
+
+#signup-section{
+    padding: 10vh 0;
+}
+#signup-section .try{
+    background: var(--primary-color-200);
+    width: 80%;
+    min-height: 15.6rem;
+    margin: auto;
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5vw;
+    align-items: center;
+    justify-content: space-between;
+}
+#signup-section input{
+    width: 380px;
+    max-width: 60%;
+    background: var(--primary-color-300);
+
+}
+
+#signup-section .email-container{
+max-width: 100%;
+}
+#signup-section button{
+    background: var(--main-skin-color-900);
+    max-width: 40%;
+    text-align: center;
+}
+#signup-section h2{
+    font-weight: 800;
+    font-size: 1.75rem;
+}
+#signup-section p{
+    font-weight: 600;
+    font-size: 1rem;
+}
+#signup-section .signup-text{
+    max-width: 20rem;
+    margin-bottom: 1rem;
+}
+footer{
+    background: #18181A;
+    background: var(--primary-color-200);
+    padding: 5vw 5vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+ footer .logo-container{
+     margin-bottom: 1rem;
+
+ }
+ footer .logo-container span{
+     font-size: 1.5rem;
+    }
+    footer .logo-container svg{
+        height:1.5rem;
+        
+}
+footer .footer-text{
+    max-width: 20rem;
+    margin-right: 5vw;
+    margin-bottom: 2rem;
+}
+footer p{
+    font-size: 0.8rem;
+}
+footer a {
+    color: var(--secondary-color-900);
+}
+footer  .footer-list a:hover{
+text-decoration: underline;
+}
+footer .click{
+    color: var(--main-skin-color-900);
+}
+
+footer .click:hover{
+    text-decoration: underline;
+}
+.footer-list{
+    width: 5rem;
+    margin-right: 4vw;
+    margin-bottom: 2rem;
+
+}
+.footer-list h5{
+    margin-bottom: 1rem;
+}
+.footer-list p{
+    margin-bottom :0.5rem;
+}
+
+footer .email-container {
+min-width: 200px;
+
+}
+footer .email-container input{
+    height: 2.2rem ;
+    width: 15rem ;
+    
+    padding: 0 1.5vw;
+    
+
+}
+footer .email-container button{
+    background: var(--main-skin-color-900);
+    height: 2.2rem;
+    max-width: 100%;
+    
+
+}
+footer .icon-container{
+    width: 2.6rem;
+    height: 2.6rem;
+    background: var(--main-skin-color-900);
+    border-radius: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    
+    margin-top: 2rem;
+    transition: all 0.2s;
+}
+footer .icon-container:hover{
+    transform: scale(1.1);
+}
+footer .icons-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 21rem;
+}
+.menu-container{
+    z-index: 99;
+    width:2.5rem;
+    height: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu , .close-menu{
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 99;
+    display: none;
+    transition: all 0.5s;
+}
+
+@media only screen and (max-width: 750px)  {
+ :root{
+    font-size: 14px;
+
+ }
+
+ #banner-section{
+    font-size: 3em;
+ }
+ #pricing{
+    padding: 0 10vw;
+ }
+
+ 
+}
+
